@@ -1,0 +1,28 @@
+PART I: 
+
+
+
+PART II:
+
+The code uses the IntList to generate a list of indicies for each unique word listed in uniquewords.txt.
+
+The function random() is used to select one of those indicies which is then used to select and print the specific word. The font used in this program is "Times New Roman". The colors are conditionally assigned based on the length of the word.
+
+Orange = words with 10 or more letters (Super Rare?)
+Blue = words with 7 to 9 letters (Rare?)
+Green = words with 5 letters or less (Common?)
+
+To run this program, just press "Play" and click every time you want to randomly generate a new cloud of unique words.
+
+Note: I used a variety of loops and tracker variables (see xpos, ypos) to print each word with one space in between while checking to make sure the words are printed within the margins.
+
+
+PART III: 
+Word Frequency: 
+The frequency of words were plotted versus the number of words that had that specific frequency. The frequency was normalized over the maximum (first) value. It relies on the wordfrequency.txt file, but is NOT specific to the book. The widths illustrate a normalization of a maximum that is determined in the .pde code. 
+
+Letter frequency: (extra credit)
+The frequency of letters in the novel is plotted versus the letter. Again, the frequencies are normalized, so there can be any 'letterfrequency.txt' file inputted, as long as there are 26 lines with the format: 
+	"letter:freq"
+It would be interesting to run this code over a large number of different books to get the relative frequencies based on the book to see if that is different. 
+From Alice in Wonderland, the 5 most frequent letters are: E, T, A, O, and I. 

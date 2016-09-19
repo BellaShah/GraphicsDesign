@@ -1,0 +1,53 @@
+Name: Bella Shah
+Date: 9/9/2016
+
+Description:
+
+In order to make the code very organized, I utilized different functions.
+
+	In the setup() function, I loaded two copies of the image so that an original image 
+remains untouched and the other image is the image that has the filters applied to it.
+
+	In the draw() function, I used keyboard input to change each image. An issue that I 
+encountered was that a key would need to be held down for the filter to be applied to 
+the image and display. I fixed this issue by creating a copy of the original image.
+I had originally created new buffer images for each filter. I also added the condition, 
+"if keyPressed"== true" instead of just the key number to ensure that only when the key was 
+pressed would the filter show and change.I also had an issue where the filters would stack and this
+was also solved by creating the one buffer image.
+
+	In the grayscale() function, I primarily used the code provided by Dr.Abraham to traverse
+an image buffer as shown in the powerpoint. I then was able to extract the RGB values and average 
+across all of the color channels per pixel.
+
+	In the contrast() function I used a formula that I found online to contrast the image. I 
+didn't want to just make it black and white so I used the formula from: http://bit.ly/2cyjnvJ and
+it worked well. I had a threshold value of 90 because after experimenting with different values, I 
+found that my photo was well-preserved and not too dark or to light that it would be difficult to
+tell what the image is.
+
+	In the gaussianBlur() function I used a real gaussian approximation which was calculated 
+using the Gaussian function for convolution. I was having trouble seeing the blur with the
+values provided so I deciced to calculate different values. I used a kernel size of 11 and a sigma 
+of 10.This gave me a very prominent blur than the values provided.
+
+	For edgeDetection() and edgeDetectionColor(), I used the Sobel operator. I have code for 
+edge detection resulting in a black and white image and edge detection in color.I personally find 
+the color image more interesting than the black and white image.To achieve the colored edges, I had
+to take into account the red, green, and blue values, and then take the square root of the 
+added squared convolution values. Whereas, with the black and white edge detection I only needed
+to take into account one color value and apply the same value throughout the "color()" function.
+
+	Finally, I created my own extra credit filter which was inspired by a TV.I traversed 
+the image buffer pixel by pixel and found the RGB value of each pixel. I then generated random RGB 
+values and added these random values to the pixel RGB values and capped the value 255. 
+I was able to create a static rainbow effect as sometimes seen when you turn on a television. 
+Because random RGB values are used, everytime the filter is applied, the filter is a little
+different. I thought this effect was neat because I was able to make the picture grainy like on a TV
+and display parts in red, green, and blue just for fun! It was easiest to create three different 
+functions for each third of the image and apply all three filters at one time.
+
+Problems: 
+An ongoing problem is that when the file runs, you have to click on the window that pops up 
+and then press each corresponding key to view each filter.After attending Dr.Abraham's office 
+hours, we decided that this was a windows bug and the code ran fine on her Mac computer.
