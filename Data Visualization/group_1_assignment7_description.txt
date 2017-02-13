@@ -1,0 +1,5 @@
+Part one of this assignment is a line graph displaying the number of arrests in Los Angeles between 2006 and 2015. 
+
+Part two of this assignment is a bar graph with clickable functionality that visualizes arrests in Los Angeles between 2006 and 2005 bases on gender, race, and age groups. When you press 1, 2, and 3 the bar graphs toggle between the three parameters. The bars change colors to show the ratios of each parameter. There is also a key included to show which color corresponds to which segment of each parameter. For example, orange for male and teal for female. 
+
+Part three is an RSS reader that parses XML files from BBC. There are 5 different categories: UK, UK Politics, World, Business, and Science. Hovering over the story gives a short description of the story and clicking the story opens it in a browser window. Use the arrow keys on the side of the screen to scroll though RSS feed. Use the buttons on the side of the screen to select different channels. 

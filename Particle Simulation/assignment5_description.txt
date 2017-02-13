@@ -1,0 +1,34 @@
+The overall goal of the project is to simulate activites that may 
+occur in a science lab using simulation or rules-based system.
+
+Bella: (SCENE 1) The goal was to have a particle drop from one beaker to another
+and then explode. Unfortunately, coordinating the elements in order from 
+the particle dropping into the beaker, floating and then exploding had a
+lot of issues. Thus, I stuck to two simulations: velocity/gravity and 
+the spring movement.The Atom class creates the atom object and has two 
+functions: fallDown() and applyForce(). In the function fallDown()
+velocity and gravity were used to have the atom particle drop from the 
+top beaker to the bottom and applyForce has Spring forces applied
+to the atom so it could "float" in water.Also, to view the scene, the user
+can press'0' and click on the screen to reset the motion during the scene only.
+
+Ken: (SCENE 2 - Bunsen Burner) Using a particle system with classes Particle and regenParticle, I simulated the flow of air/gas molecules flowing out of bunsen burner nozzle. User can click up to three times to increase the number of particles in the simulation.
+
+Kyle (SCENE 3 - Planets): The goals of this simulation were to: 
+	> Generate a random assortment of planets that followed a rules-based system. 
+	> Incorporate mouse input to manipulate gravitational fields.
+	> Find the net gravitational force for each planet by using nested for loops. 
+	> Enable planets to remain in screen by reducing velocity as it collides with the 	wall. 
+	> Visualize the gravitation force between each planet by connecting them with 		lines of various weights. 
+
+In general, this simulation proved to be a challenge. Separation of the x and y components of the planets (using arctangent) was a mathematical difficulty. The planets are spawned randomly with random origins, random sizes, and random velocities. 
+
+The net gravitational force is calculated by iterating through each planet (particle) and finding the contribution in the X and Y direction from each planet. This required some math. The lines are weighted on strength of force, which is described by Mass/Distance. Additionally, the force for each planet is divided by the mass, thus giving objects a sense of inertia. 
+
+The user can press the mouse button and there will be an additional gravitational force exerted between the mouse and each planet. This is significantly stronger than the inter-planetary gravitational forces, meant to simulate a “black hole”. 
+
+Additionally, the user can press ‘g’ to remove inter-planetary gravity and just watch the planets fall as if they were particles on Earth. 
+
+Last, as the planets collide with the edges of the screen, they are subjected to a 20% energy loss. 
+
+The gravitational force and the energy loss between edge collisions are the two rules for this system. 
